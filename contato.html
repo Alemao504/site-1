@@ -10,7 +10,9 @@
 <body>
     <div id="titulo_principal">
             <h1 > O senhor dos aneis</h1>
-            <h2 > Uma das triologia mais famosas dos cinemas </h2>
+            <h2 > Uma das triologia mais famosas dos cinemas 
+                pneumoultramicroscopicossili<wbr>covulcanoconiótico
+            </h2>
        
             <nav>
                 <a href="index.html">home</a>
@@ -28,12 +30,13 @@
     </div>
 
         <h2 class="titulo_segundario">Entre em contato: </h2>
+
             <form action="processa.php" method="POST" autocomplete="off">
+
                 <label for="nomepessoa">Nome:</label>
                 <input type="text" name="Nomepessoa" 
                 id nome="nomepessoa" minlength="3" maxlength="15"
                 required placeholder="Nome"><br><br>
-                
                 
                 <label for="email">Email: </label>
                 <input type="email" name="email" id="email"
@@ -62,7 +65,6 @@
                 <input type="color" id="cor" name="cor"><br><br>
 
                 <fieldset>
-
                     <label for="data">Iforme a data:</label>
                     <input type="date" name="data" id="data"><br><br>
 
@@ -77,7 +79,6 @@
 
                     <label for="datahora">Data e hora atual</label>
                     <input type="datetime-local" name="datahora" id="datahora"><br><br>
-
                 </fieldset><br><br>
 
                 <label for="pesquisa">Pesquisa</label>
@@ -86,23 +87,78 @@
                 <label for="descricao">Infome o que você gosta nos filmes:</label><br>
                 <textarea cols="30"  rows="10" name="descricao" id="descricao">
                 </textarea><br><br>
+
                 <fieldset>
-                    
                     <legend>Qual seu filme favorito?</legend>
                     <label for="filme1"><input type="radio" name="filme" id="filme1" value="filme 1">Filme 1</label>
                     <label for="filme2"><input checked type="radio" name="filme" id="filme2" value="filme 2">Filme 2</label>
                     <label for="filme3"><input type="radio" name="filme" id="filme3" value="filme 3">Filme 3</label>
-
                 </fieldset>   
 
-                
                 <select>
-
                     <option selected value="filme 1">Filme 1</option>
                     <option value="filme 2">Filme 2</option>
                     <option value="filme 3">Filme 3</option>
+                </select><br><br>
 
+                <LABEL for="nivel">Escolha o nivél</LABEL>
+                <input type="range" max="10" min="1" id="nivel" name="nivel"><br><br>
+
+                <select id="lista_suspensa" name="lista">
+
+                    <optgroup label="teste de legenda no combobox ">
+                        <option value="teste 1">Teste 1</option>
+                        <option valeue="teste 2">Teste 2</option>
+                        <option velue="teste 3">Teste 3</option>
+                    </optgroup>
+
+                    <optgroup label="teste de legenda no combobox 2">
+                        <option value="teste 4">Teste 4</option>
+                        <option value="teste 5">Teste 5</option>
+                        <option value="teste 6">Teste 6</option>
+                    </optgroup><br><br>
+                        
                 </select>
+
+                <fieldset>
+                    <legend>Desenvolvimento para internet</legend>
+                    <label for="checkbox">Escolha suas linguegem de programção preferidas.</label><br><br>
+                    <label><input type="checkbox" name="php" valeue="php">PHP</label>
+                    <label><input type="checkbox" name="html5" value="html5">HTML5</label>
+                    <label><input type="checkbox" name="css" value="css">CSS</label>
+                    <label><input type="checkbox" name="js" value="js">JAVASCRIPT</label>
+                </fieldset><br><br>
+
+                
+                <!--Datalist de possíveis ganhadores da copa do mundo-->    
+                <fieldset>
+                    <legend>Possiveis ganhadores da copa do mundo 2026</legend>
+                    <label for="busca_datalist">Seleção</label>
+                    <input type="text" id="busca_datalist" list="paises">
+                    <datalist id="paises">
+                        <option>Brasil</option>
+                        <option>França</option>
+                        <option>Argentina</option>
+                        <option>Alemanha</option>
+                        <option>Inglaterra</option>
+                        <option>Espanha</option>
+                    </datalisit>
+                </fieldset>
+
+                <audio controls muted autoplay loop>
+                    <source src="audio/musica.mp3" type="audio/mp3">
+                    Navegador não compatível para executar audio!
+                </audio><br><br>
+
+                <video controls muted autoplay loop>
+                    <source src="video/videoteste.mp4" type="video/mp4">
+                </video><br><br>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=i5go5f0I9_o" 
+                title="youtube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
                 <button type="reset">Limpar</button>
                 <button type="submit">Enviar</button>
