@@ -29,34 +29,27 @@
             </nav>
     </div>
 
-        <h2 class="titulo_segundario">Entre em contato: </h2>
+        <h1 class="titulo_segundario">Entre em contato com a terra média</h1>
+
+        <p>Envie sua mensagem diretamente para o Concelho de Elrond.</p>
 
             <form action="processa.php" method="POST" autocomplete="off">
-
-                <label for="nomepessoa">Nome:</label>
+                <fieldset>
+                    <legend>Cadastro</legend>
+                <label for="nomepessoa">Seu Nome na Terra Média:</label>
                 <input type="text" name="Nomepessoa" 
                 id nome="nomepessoa" minlength="3" maxlength="15"
-                required placeholder="Nome"><br><br>
+                required placeholder="Ex:Gandalf"><br><br>
                 
-                <label for="email">Email: </label>
+                <label for="email">Seu Corvo Eletrönico(E-mail):</label>
                 <input type="email" name="email" id="email"
                 required placeholder="E-mail"><br><br>
 
                 <label for="Ano">Ano de nascimento: </label>
-                <input type="number" id="ano" name="ano" max="2026" min="1900"
-                placeholder="Informe seu ano de nascimento"><br><br>
-
-                <label for="telefone">Telefone</label>
-                <input type="tel" name="telefone" id="telefone"
-                placeholder="Informe seu numero de telefone"><br><br>
-
-                <label for="github">Informe seu Github: </label>
-                <input typer="url" name="github" id="github"
-                placeholder="Informe seu github"><br><br>
-
-                <label for="senha">Informe sua senha:</label>
-                <input type="password" id="senha" name="senha"
-                placeholder="Senha"><br><br>
+                <input type="number" id="ano" name="ano" max="2014" min="1900"
+                required placeholder="xx/xx/xxxx"><br><br>
+                </fieldset>
+                
 
                 <label for="arquivo">Anexe um arquivo:</label>
                 <input type="file" id="arquivo" name="arquivo"><br><br>
