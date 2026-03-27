@@ -7,4 +7,11 @@
         .titulo_segundario {background-color: #2a522a;
         color: white;}
             
+        #layout{
+                display: flex;
+        }
+
+        .rodape{
+                text-align: center;
+        }
     
