@@ -8,11 +8,9 @@
 </head>
 
 <body>
-    <div id="titulo_principal">
+    <header id="titulo_principal">
             <h1 > O senhor dos aneis</h1>
-            <h2 > Uma das triologia mais famosas dos cinemas 
-                pneumoultramicroscopicossili<wbr>covulcanoconiótico
-            </h2>
+            <h2 > Uma das triologia mais famosas dos cinemas </h2>
        
             <nav>
                 <a href="index.html">home</a>
@@ -27,15 +25,16 @@
                 <a href="contato.html">Contato</a>
                 
             </nav>
-    </div>
+        </header>
 
-        <h1 class="titulo_segundario">Entre em contato com a terra média</h1>
+        <h3 class="titulo_segundario">Entre em contato com a terra média</h3>
 
         <p>Envie sua mensagem diretamente para o Concelho de Elrond.</p>
 
+            <!--Formulario de cadastro-->
             <form action="processa.php" method="POST" autocomplete="off">
                 <fieldset>
-                    <legend>Cadastro</legend>
+                    <legend>Cadastro</legend><br>
                 <label for="nomepessoa">Seu Nome na Terra Média:</label>
                 <input type="text" name="Nomepessoa" 
                 id nome="nomepessoa" minlength="3" maxlength="15"
@@ -45,122 +44,90 @@
                 <input type="email" name="email" id="email"
                 required placeholder="E-mail"><br><br>
 
-                <label for="Ano">Ano de nascimento: </label>
-                <input type="number" id="ano" name="ano" max="2014" min="1900"
-                required placeholder="xx/xx/xxxx"><br><br>
-                </fieldset>
-                
+                <label for="Ano_nascimento">Ano de nascimento: </label>
+                <input type="number" id="Ano_nascimento" name="Ano_nascimento" max="2014" min="1900"
+                required placeholder="xx/xx/xxxx"><br>
+                </fieldset><br>
 
-                <label for="arquivo">Anexe um arquivo:</label>
-                <input type="file" id="arquivo" name="arquivo"><br><br>
-
-                <label for="cor">Informe uma cor:</label>
-                <input type="color" id="cor" name="cor"><br><br>
-
+                <!--Local para escolher a raça-->    
                 <fieldset>
-                    <label for="data">Iforme a data:</label>
-                    <input type="date" name="data" id="data"><br><br>
+                    <legend>Qual é a sua raça?</legend> 
+                    <label for="raca1"><input type="radio" name="raca" id="raca" value="raca 1"> Humano </label>
+                    <label for="raca2"><input checked type="radio" name="raca" id="raca2" value="raca 2"> Elfo </label>
+                    <label for="raca3"><input type="radio" name="raca" id="raca3" value="raca 3"> Anão </label>
+                    <label for="raca4"><input type="radio" name="raca" id="raca" value="raca 4"> Hobbit </label>
+                </fieldset><br>
 
-                    <label for="mes">Informe o mes:</label>
-                    <input type="month" name="mes" id="mes"><br><br>
+                <!--Filme favorito-->
+                <label for="filme_favorito">Escolha seu filme favorito:</label> 
+                <input type="text" id="filme_favorito" list="filmesf">
+                <datalist id="filmesf">
+                    <option>O Senhor dos Anéis: A Sociedade do Anel.</option>
+                    <option>O Senhor dos Anéis: As Duas Torres.</option>
+                    <option>O Senhor dos Anéis: O Retorno do Rei</option>
+                </datalist><br><br>
 
-                    <label for="semana">Informe a semana:</label>
-                    <input type="week" name="semana" id="semana"><br><br>
-
-                    <label for="hora">Informe a hora:</label>
-                    <input type="time" name="hora" id="hora"><br><br>
-
-                    <label for="datahora">Data e hora atual</label>
-                    <input type="datetime-local" name="datahora" id="datahora"><br><br>
-                </fieldset><br><br>
-
-                <label for="pesquisa">Pesquisa</label>
-                <input type="search" name="pesquisa" id="pesquisa"><br><br>
-                
-                <label for="descricao">Infome o que você gosta nos filmes:</label><br>
-                <textarea cols="30"  rows="10" name="descricao" id="descricao">
-                </textarea><br><br>
-
-                <fieldset>
-                    <legend>Qual seu filme favorito?</legend>
-                    <label for="filme1"><input type="radio" name="filme" id="filme1" value="filme 1">Filme 1</label>
-                    <label for="filme2"><input checked type="radio" name="filme" id="filme2" value="filme 2">Filme 2</label>
-                    <label for="filme3"><input type="radio" name="filme" id="filme3" value="filme 3">Filme 3</label>
-                </fieldset>   
-
-                <select>
-                    <option selected value="filme 1">Filme 1</option>
-                    <option value="filme 2">Filme 2</option>
-                    <option value="filme 3">Filme 3</option>
+                <!--Local favorito-->
+                <label for="Local_terramedia">Qual seu local favorito na terra média:</label>
+                <select id="Local_terramedia" name="local">
+                        <optgroup label="Reinos dos homens">
+                            <option>Gondor </option>
+                            <option>Rohan</option>
+                        </optgroup>
+                        <optgroup label="Terras élficas">
+                            <option>Valfenda</option>
+                            <option>Lothlórien</option>
+                        </optgroup>
+                        <optgroup label="Outros">
+                            <option>Mordor</option>
+                            <option>Condado</option>
+                        </optgroup>
                 </select><br><br>
 
-                <LABEL for="nivel">Escolha o nivél</LABEL>
-                <input type="range" max="10" min="1" id="nivel" name="nivel"><br><br>
-
-                <select id="lista_suspensa" name="lista">
-
-                    <optgroup label="teste de legenda no combobox ">
-                        <option value="teste 1">Teste 1</option>
-                        <option valeue="teste 2">Teste 2</option>
-                        <option velue="teste 3">Teste 3</option>
-                    </optgroup>
-
-                    <optgroup label="teste de legenda no combobox 2">
-                        <option value="teste 4">Teste 4</option>
-                        <option value="teste 5">Teste 5</option>
-                        <option value="teste 6">Teste 6</option>
-                    </optgroup><br><br>
-                        
-                </select>
-
+                <!--Habilides e caracteristicas-->
                 <fieldset>
-                    <legend>Desenvolvimento para internet</legend>
-                    <label for="checkbox">Escolha suas linguegem de programção preferidas.</label><br><br>
-                    <label><input type="checkbox" name="php" valeue="php">PHP</label>
-                    <label><input type="checkbox" name="html5" value="html5">HTML5</label>
-                    <label><input type="checkbox" name="css" value="css">CSS</label>
-                    <label><input type="checkbox" name="js" value="js">JAVASCRIPT</label>
+                    <legend>Suas habilidades e caracteristicas</legend>
+                    <label><input type="checkbox" name="espada" valeue="espada"> Espadas</label>
+                    <label><input type="checkbox" name="arco" value="arco"> Arco e felchas</label>
+                    <label><input type="checkbox" name="magia" value="magia"> Magia</label>
+                    <label><input type="checkbox" name="Futividade" value="Futividade"> Furtividade Hobbit</label><br><br>
+
+                    <LABEL for="coragem">Seu nivel de coragem (1 a 10)</LABEL>
+                    <input type="range" max="10" min="1" id="coragem" name="coragem"><br><br>
+
+                    <label for="cor">Escolha uma cor para seu manto:</label>
+                    <input type="color" id="cor" name="cor"><br><br>
+
+                    <label for="reino_origem">Qual seu reino de origem:</label> 
+                    <input type="text" id="reino_origem" list="reinos">
+                        <datalist id="reinos">
+                            <option>Mordor</option>
+                            <option>Rohan</option>
+                            <option>Gondor</option>
+                            <option>Valfenda</option>
+                            <option>Lóthlorien</option>
+                            <option>Moria</option>
+                            <option>O Condado</option>
+                            <option>Isengard</option>
+                    </datalist><br><br>
+                    
+                    <label for="data_jornada">Data da sua jornada</label>
+                    <input type="date" name="data_jornada" id="data_jornada"><br><br>
+
+                    <label for="arquivo_reliquia">Anexe a reliquia que ira utilizar em sua jornada:</label>
+                    <input type="file" id="arquivo_reliquia" name="arquivo_reliquia"><br><br>
                 </fieldset><br><br>
 
-                
-                <!--Datalist de possíveis ganhadores da copa do mundo-->    
-                <fieldset>
-                    <legend>Possiveis ganhadores da copa do mundo 2026</legend>
-                    <label for="busca_datalist">Seleção</label>
-                    <input type="text" id="busca_datalist" list="paises">
-                    <datalist id="paises">
-                        <option>Brasil</option>
-                        <option>França</option>
-                        <option>Argentina</option>
-                        <option>Alemanha</option>
-                        <option>Inglaterra</option>
-                        <option>Espanha</option>
-                    </datalisit>
-                </fieldset><br><br>
+               <!---Canal de  contato com a terra media-->
+                <label for="contato">Reporte sua mensagem ao conselho:</label><br>
+                <textarea 
+                    id="contato" name="contato" 
+                    rows="10" cols="50"  
+                    placeholder="Escreva sua missão..." required>
+                </textarea><br>
 
-                <label for="musicas">Musica da copa do mundo.</label><br>
-                <audio controls muted autoplay loop>
-                    <source src="audio/musica.mp3" type="audio/mp3" id="musicas">
-                    Navegador não compatível para executar audio!
-                </audio><br><br>
-
-                <video controls muted autoplay loop>
-                    <source width="560" heigth="315" src="video/videoteste.mp4" type="video/mp4">
-                </video><br><br>
-
-                <label for="Cristiano_ronaldo">
-                    <h3>EDIT senhores dos aneis.</h3></label>
-                <iframe width="560" height="315" src="https://youtube.com/shorts/3-CMEbiFUrI?si=81m46lIEGi0IbJhi" id="Cristiano_ronaldo"
-                title="youtube video player" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br><br>
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.4984314073345!2d-53.48111392387256!3d-24.949151114041513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3d15547bda185%3A0xd0cbc7fb7cc4a1a6!2sUNIPAR%20-%20Universidade%20Paranaense%20-%20Cascavel!5e0!3m2!1spt-BR!2sbr!4v1774307436397!5m2!1spt-BR!2sbr" 
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-                <button type="reset">Limpar</button>
-                <button type="submit">Enviar</button>
+                <button type="reset">Apagar Pergaminho</button>
+                <button type="submit">Enviar Para Valfenda</button>
             
             </form>
             
